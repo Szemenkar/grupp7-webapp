@@ -22,7 +22,7 @@
 <div class="container">
     @using (Html.BeginForm("Index", "Home", FormMethod.Get))
     {
-        <label for="topic">Select a topic:</label>
+        <label for="topic"></label>
         <select id="topic" name="topic" class="form-select">
             <option value="">All</option>
             @foreach (var topic in topicDisplayNames)
@@ -31,9 +31,9 @@
             }
         </select>
 
-        <label for="sortBy">Sort by:</label>
+        <label for="sortBy"></label>
         <select id="sortBy" name="sortBy" class="form-select">
-            <option value="">Default</option>
+            <option value="">Sort by</option>
             <option value="newest">Newest to Oldest</option>
             <option value="oldest">Oldest to Newest</option>
         </select>
