@@ -53,7 +53,7 @@ label[for="sortBy"] {
 .card-body{
   background-color: rgba(255, 255, 255, 0);
   border-radius: 0px;
-  color: black;
+  color: rgb(72, 72, 72);
   font-family: outfit;
   overflow: hidden;
 }
@@ -65,7 +65,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: #8c2b32;
+  background-color: hsl(0, 0%, 100%);
   background-image: url("images/bg6.jpg");
   color: rgba(255, 255, 255);
   background-size: cover;
@@ -88,11 +88,11 @@ body {
 
 h1 {
   font-family: "Abril Fatface", serif;
-  font-size: 60pt;
+  font-size: 45pt;
 }
 
 h5 {
-  font-family: "Abril Fatface", serif;
+  font-family: "Outfit", sans-serif;
   font-size: 15pt;
 }
 
@@ -100,3 +100,8 @@ p {
   font-family: "Outfit", sans-serif;
   font-size: 12pt;
 }
+
+.card-link {
+  color: red;
+}
+

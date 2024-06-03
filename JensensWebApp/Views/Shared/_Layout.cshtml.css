@@ -38,6 +38,20 @@ button.accept-policy {
   line-height: inherit;
 }
 
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .footer {
   position: absolute;
   bottom: 0;
