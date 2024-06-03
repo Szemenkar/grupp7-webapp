@@ -2,7 +2,6 @@ html {
   font-size: 14px;
 }
 
-
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -10,18 +9,21 @@ html {
 }
 
 .btn.btn-primary:hover{
-  background-color: rgb(199, 202, 209);
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  color: rgb(201, 48, 114);
 }
 
 .btn.btn-primary{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(199, 202, 209, 0);
   height: 40px;
   width: 80px;
-  border: 2px solid #8c2b32;
+  border: 2px solid #ffffff;
   border-radius: 20px;
   margin-left: 20px;
   margin-bottom: 4px;
-  color: black;
+  color: white;
 }
 
 .form-select{
@@ -39,16 +41,20 @@ label[for="sortBy"] {
 }
 
 .card{
+  background-color: rgba(255, 255, 255, 0.7);
   max-width: 400px;
   min-height: 250px;
   margin: 5px;
+  border-radius: 0px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .card-body{
-  background-color: #ffffff;
-  color: black;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0px;
+  color: rgb(72, 72, 72);
+  font-family: outfit;
   overflow: hidden;
 }
 
@@ -59,6 +65,43 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: #8c2b32;
-  color: white;
+  background-color: hsl(0, 0%, 100%);
+  background-image: url("images/bg6.jpg");
+  color: rgba(255, 255, 255);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 45pt;
+}
+
+h5 {
+  font-family: "Outfit", sans-serif;
+  font-size: 15pt;
+}
+
+p {
+  font-family: "Outfit", sans-serif;
+  font-size: 12pt;
+}
+
+.card-link {
+  color: red;
+}
+
