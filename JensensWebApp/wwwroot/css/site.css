@@ -8,11 +8,37 @@ html {
   }
 }
 
+nav.navbar.navbar-expand-sm.navbar-toggleable-sm.navbar-light.bg-white.border-bottom.box-shadow.mb-3{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+a.navbar-brand{
+  font-family: "Outfit", sans-serif !important;
+  font-size: 13pt;
+  color: white !important;
+  font-weight: 400 !important;
+}
+
+a.nav-link.text-dark{
+  font-family: "Outfit", sans-serif !important;
+  font-size: 13pt;
+  color: white !important;
+  font-weight: 400 !important;
+}
+
+a.nav-link.text-dark:hover{
+  font-family: "Outfit", sans-serif !important;
+  font-size: 13pt;
+  color: white !important;
+  font-weight: 400 !important;
+  text-decoration: underline;
+}
+
 .btn.btn-primary:hover{
   background-color: rgb(255, 255, 255);
   border: 2px solid #ffffff;
   border-radius: 20px;
-  color: rgb(201, 48, 114);
+  color: rgb(201, 48, 79);
 }
 
 .btn.btn-primary{
@@ -24,6 +50,9 @@ html {
   margin-left: 20px;
   margin-bottom: 4px;
   color: white;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 13pt;
 }
 
 .form-select{
