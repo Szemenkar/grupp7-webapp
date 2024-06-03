@@ -6,6 +6,7 @@ a.navbar-brand {
   text-align: center;
   word-break: break-all;
 }
+
 a {
   color: #ffffff;
 }
@@ -17,7 +18,8 @@ a {
   /*border-color: #1861ac;*/
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
   color: #fff;
   background-color: #ffffff;
   border-color: #ffffff;
@@ -26,6 +28,7 @@ a {
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
