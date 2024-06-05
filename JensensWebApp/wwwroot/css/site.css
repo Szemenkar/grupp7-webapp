@@ -2,29 +2,96 @@ html {
   font-size: 14px;
 }
 
-
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
 
-.btn.btn-primary:hover{
-  background-color: rgb(199, 202, 209);
+body {
+  margin-bottom: 60px;
+  background-color: hsl(0, 0%, 100%);
+  background-image: url("images/bg.jpg");
+  color: rgba(255, 255, 255);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.btn.btn-primary{
-  background-color: rgb(255, 255, 255);
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.outfit-regular {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 45pt;
+}
+
+h5 {
+  font-family: "Outfit", sans-serif;
+  font-size: 15pt;
+}
+
+p {
+  font-family: "Outfit", sans-serif;
+  font-size: 12pt;
+}
+
+body{
+  font-family: "Outfit", sans-serif;
+  color: white !important;
+}
+
+nav.navbar.navbar-expand-sm.navbar-toggleable-sm.navbar-light.bg-white.border-bottom.box-shadow.mb-3 {
+  background-color: transparent !important;
+}
+
+a.nav-link.text-dark{
+  color: white !important;
+  font-size: 14 pt;
+}
+
+a.nav-link.text-dark:hover{
+  text-decoration: underline !important;
+}
+
+a.navbar-brand{
+  font-family: "Outfit", sans-serif !important;
+  font-size: 13pt;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.btn.btn-primary {
+  background-color: transparent;
   height: 40px;
   width: 80px;
-  border: 2px solid #8c2b32;
+  border: 2px solid #ffffff;
   border-radius: 20px;
   margin-left: 20px;
   margin-bottom: 4px;
-  color: black;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 14pt;
 }
 
-.form-select{
+.btn.btn-primary:hover {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  color: rgb(201, 48, 79);
+}
+
+.form-select {
   max-width: 200px;
   margin: 5px;
   display: inline;
@@ -38,18 +105,43 @@ label[for="sortBy"] {
   font-size: 20px;
 }
 
-.card{
+.card {
+  background-color: rgba(255, 255, 255, 0.7);
   max-width: 400px;
   min-height: 250px;
   margin: 5px;
+  border-radius: 0px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.card-body{
-  background-color: #ffffff;
-  color: black;
+.card:hover {
+  transform: scale(1.03);
+  /*box-shadow: 0 0 10px #000;*/
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-body {
+  color: rgb(72, 72, 72);
   overflow: hidden;
+}
+
+.card-body a:hover{
+  text-decoration: none !important;
+}
+
+.card-link:hover {
+  text-decoration: none !important;
+}
+
+div.container, a{
+  font-size: 16px !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+div.container>a:hover{
+  text-decoration: underline !important;
 }
 
 html {
@@ -57,8 +149,6 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
-  background-color: #8c2b32;
-  color: white;
+.border-bottom {
+  border-bottom: transparent !important;
 }
