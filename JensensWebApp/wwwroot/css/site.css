@@ -8,100 +8,10 @@ html {
   }
 }
 
-nav.navbar.navbar-expand-sm.navbar-toggleable-sm.navbar-light.bg-white.border-bottom.box-shadow.mb-3 {
-  background-color: rgba(255, 255, 255, 0) !important;
-}
-
-a.navbar-brand {
-  font-family: "Outfit", sans-serif !important;
-  font-size: 13pt;
-  color: white !important;
-  font-weight: 400 !important;
-}
-
-a.nav-link.text-dark {
-  font-family: "Outfit", sans-serif !important;
-  font-size: 13pt;
-  color: white !important;
-  font-weight: 400 !important;
-}
-
-a.nav-link.text-dark:hover {
-  font-family: "Outfit", sans-serif !important;
-  font-size: 13pt;
-  color: white !important;
-  font-weight: 400 !important;
-  text-decoration: underline;
-}
-
-.btn.btn-primary:hover {
-  background-color: rgb(255, 255, 255);
-  border: 2px solid #ffffff;
-  border-radius: 20px;
-  color: rgb(201, 48, 79);
-}
-
-.btn.btn-primary {
-  background-color: rgb(199, 202, 209, 0);
-  height: 40px;
-  width: 80px;
-  border: 2px solid #ffffff;
-  border-radius: 20px;
-  margin-left: 20px;
-  margin-bottom: 4px;
-  color: white;
-  font-family: "Outfit", sans-serif;
-  font-weight: 400;
-  font-size: 13pt;
-}
-
-.form-select {
-  max-width: 200px;
-  margin: 5px;
-  display: inline;
-}
-
-label[for="topic"] {
-  font-size: 20px;
-}
-
-label[for="sortBy"] {
-  font-size: 20px;
-}
-
-.card {
-  background-color: rgba(255, 255, 255, 0.7);
-  max-width: 400px;
-  min-height: 250px;
-  margin: 5px;
-  border-radius: 0px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 10px #000;
-  background-color: #ffffff;
-}
-
-.card-body {
-  background-color: rgba(255, 255, 255, 0);
-  border-radius: 0px;
-  color: rgb(72, 72, 72);
-  font-family: outfit;
-  overflow: hidden;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
   margin-bottom: 60px;
   background-color: hsl(0, 0%, 100%);
-  background-image: url("images/bg6.jpg");
+  background-image: url("images/bg.jpg");
   color: rgba(255, 255, 255);
   background-size: cover;
   background-position: center;
@@ -136,8 +46,107 @@ p {
   font-size: 12pt;
 }
 
-.card-link {
-  text-decoration: none;
+body{
+  font-family: "Outfit", sans-serif;
+  color: white !important;
+}
+
+nav.navbar.navbar-expand-sm.navbar-toggleable-sm.navbar-light.bg-white.border-bottom.box-shadow.mb-3 {
+  background-color: transparent !important;
+}
+
+a.nav-link.text-dark{
+  color: white !important;
+  font-size: 14 pt;
+}
+
+a.nav-link.text-dark:hover{
+  text-decoration: underline !important;
+}
+
+a.navbar-brand{
+  font-family: "Outfit", sans-serif !important;
+  font-size: 13pt;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.btn.btn-primary {
+  background-color: transparent;
+  height: 40px;
+  width: 80px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin-left: 20px;
+  margin-bottom: 4px;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 14pt;
+}
+
+.btn.btn-primary:hover {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  color: rgb(201, 48, 79);
+}
+
+.form-select {
+  max-width: 200px;
+  margin: 5px;
+  display: inline;
+}
+
+label[for="topic"] {
+  font-size: 20px;
+}
+
+label[for="sortBy"] {
+  font-size: 20px;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.7);
+  max-width: 400px;
+  min-height: 250px;
+  margin: 5px;
+  border-radius: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  /*box-shadow: 0 0 10px #000;*/
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.card-body {
+  color: rgb(72, 72, 72);
+  overflow: hidden;
+}
+
+.card-body a:hover{
+  text-decoration: none !important;
+}
+
+.card-link:hover {
+  text-decoration: none !important;
+}
+
+div.container, a{
+  font-size: 16px !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+div.container>a:hover{
+  text-decoration: underline !important;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
 }
 
 .border-bottom {
