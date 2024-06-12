@@ -10,7 +10,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: hsl(0, 0%, 100%);
+  /*background-color: black;*/
   background-image: url("images/bg.jpg");
   color: rgba(255, 255, 255);
   background-size: cover;
