@@ -100,6 +100,27 @@ a.navbar-brand {
   text-align: center;
 }
 
+a.menu-link:hover {
+  text-decoration: underline !important;
+}
+
+.menu {
+  position: absolute;
+  top: 100px;
+  /* Värde beroende på headerns höjd */
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  transition: top 0.3s;
+  opacity: 1;
+  transition: top 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+
+
+
 .btn.btn-primary {
   background-color: transparent;
   height: 40px;

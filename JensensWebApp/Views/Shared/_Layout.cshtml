@@ -26,8 +26,8 @@
                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img
                             src="~/images/logo.png" alt="Grupp7" width="55" /></a>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home |</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
                 </ul>
             </div>
@@ -36,10 +36,13 @@
     <div class="menu">
         <ul class="menu-list">
             <li class="menu-item">
-                <a>Idrott</a>
-                <a>Idrott</a>
-                <a>Idrott</a>
-                <a>Idrott</a>
+                <a class="menu-link" href="#">Idrott |</a>
+                <a class="menu-link" href="#">Häsla |</a>
+                <a class="menu-link" href="#">Samhälle och Konflikter |</a>
+                <a class="menu-link" href="#">Vetenskap och Teknik |</a>
+                <a class="menu-link" href="#">Livsstil och Fritid |</a>
+                <a class="menu-link" href="#">Ekonomi |</a>
+                <a class="menu-link" href="#">Religion</a>
             </li>
         </ul>
     </div>
@@ -50,15 +53,17 @@
     </div>
     <footer class="border-top footer text-muted">
         <div class="container">
-            <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="Grupp7" width="40"/></a>
+            <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="Grupp7"
+                    width="40" /></a>
             &nbsp;&nbsp;&nbsp;
-            &copy; 2024  -  JensensWebApp  -  <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+            &copy; 2024 - JensensWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
             <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true" defer></script>
+    <script src="~/js/menu.js" asp-append-version="true" defer></script> @* Menu script*@
     <script src="~/js/footer.js" asp-append-version="true" defer></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
