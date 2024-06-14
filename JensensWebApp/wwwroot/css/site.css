@@ -100,6 +100,20 @@ a.navbar-brand {
   text-align: center;
 }
 
+.menu {
+  position: absolute;
+  top: 600px;
+  /* Justera detta värde beroende på headerns höjd */
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: top 0.3s;
+  opacity: 1;
+  transition: top 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
 
 
 
