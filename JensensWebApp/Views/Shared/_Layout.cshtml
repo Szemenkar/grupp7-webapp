@@ -48,15 +48,18 @@
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - JensensWebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+            <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/logo.png" alt="Grupp7" width="40"/></a>
+            &nbsp;&nbsp;&nbsp;
+            &copy; 2024  -  JensensWebApp  -  <a asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+            <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
+    <script src="~/js/footer.js" asp-append-version="true" defer></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
