@@ -102,11 +102,11 @@ a.navbar-brand {
 
 .menu {
   position: absolute;
-  top: 600px;
-  /* Justera detta värde beroende på headerns höjd */
+  top: 100px;
+  /* Värde beroende på headerns höjd */
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
   transition: top 0.3s;
   opacity: 1;
