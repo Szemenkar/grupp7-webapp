@@ -61,4 +61,5 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
   // När sidan laddas första gången
   menu.style.top = `${headerHeight}px`;
+  menu.style.opacity = '1';
 });
