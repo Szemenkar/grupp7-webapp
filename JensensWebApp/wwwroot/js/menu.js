@@ -1,68 +1,32 @@
-// const menu = document.querySelector('.menu');
-// const headerHeight = document.querySelector('header').offsetHeight;
-// let prevScrollPos = window.scrollY;
-
-// window.addEventListener('scroll', () => {
-//   const currentScrollPos = window.scrollY;
-//   if (prevScrollPos > currentScrollPos) {
-//     // Användaren scrollar uppåt
-//     menu.style.top = '0';
-//     menu.style.opacity = '1';
-//   } else {
-//     // Användaren scrollar nedåt
-//     menu.style.top = '-100%';
-//     menu.style.opacity = '0';
-//   }
-//   prevScrollPos = currentScrollPos;
-// });
-
-// window.addEventListener('load', () => {
-//   // När sidan laddas första gången
-//   menu.style.top = `${headerHeight}px`;
-// });
-
-// window.addEventListener('scroll', () => {
-//   const currentScrollPos = window.scrollY;
-//   if (currentScrollPos > headerHeight) {
-//     // Användaren har scrollat förbi headern
-//     menu.style.position = 'fixed';
-//     menu.style.top = '0';
-//   } else {
-//     // Användaren är fortfarande över headern
-//     menu.style.position = 'absolute';
-//     menu.style.top = `${headerHeight}px`;
-//   }
-// });
-
-
-
 const menu = document.querySelector('.menu');
-const headerHeight = document.querySelector('header').offsetHeight;
-let prevScrollPos = window.scrollY;
+const headerHeight = document.querySelector('header').offsetHeight;//Höjden på headern
+let prevScrollPos = window.scrollY; // Kollar föregående positionen på scroll
 
+//"Lyssnar" på scroll
 window.addEventListener('scroll', () => {
   const currentScrollPos = window.scrollY;
-  const scrollDelta = currentScrollPos - prevScrollPos;
+  const scrollUp = currentScrollPos - prevScrollPos;
 
   if (currentScrollPos > headerHeight) {
-    // Användaren har scrollat förbi headern
+    // Scrollat förbi headern
     menu.style.position = 'fixed';
     menu.style.top = '0';
     menu.style.opacity = '0';
-    if (scrollDelta < 0) {
-      // Användaren scrollar uppåt
+    if (scrollUp < 0) {
+      // Scrollar uppåt
       menu.style.position = 'fixed';
-      //menu.style.top = `${headerHeight}px`;
       menu.style.opacity = '1';
+      menu.style.background = 'linear-gradient(to bottom, #FB7E7E, #ba85e9, rgba(186, 133, 233, 0.7))';
     }
   } else {
-    // Användaren är fortfarande över headern
+    // Om användaren är ovanför headern
     menu.style.position = 'absolute';
     menu.style.top = `${headerHeight}px`;
     menu.style.opacity = '1';
+    menu.style.background = 'transparent';
   }
 
-  prevScrollPos = currentScrollPos;
+  prevScrollPos = currentScrollPos; //Uppdaterar positionen
 });
 
 // Första gången sidan laddas
