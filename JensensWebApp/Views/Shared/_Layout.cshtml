@@ -1,4 +1,26 @@
 ﻿<!DOCTYPE html>
+
+@model IList<JensensWebApp.Models.Article>
+
+@{
+    ViewBag.Title = "Articles";
+
+    Dictionary<string, string> topicDisplayNames = new Dictionary<string, string>
+{
+{"Halsa", "Hälsa"},
+{"SamhalleKonflikter", "Samhälle och Konflikter"},
+{"Miljo", "Miljö"},
+{"VetenskapTeknik", "Vetenskap och Teknik"},
+{"LivsstillFritt", "Livsstil och Fritid"},
+{"Ekonomi", "Ekonomi"},
+{"Religion", "Religion"},
+{"Idrott", "Idrott"}
+};
+
+    // Sortera efter namn
+    var sortedTopics = topicDisplayNames.OrderBy(x => x.Value);
+}
+
 <html lang="en">
 
 <head>
@@ -13,8 +35,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
 
-    @* Utkommenterad <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
-    @* Utkommenterad <link rel="stylesheet" href="~/JensensWebApp.styles.css" asp-append-version="true" /> *@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 
@@ -33,19 +53,21 @@
             </div>
         </nav>
     </header>
-    <div class="menu">
-        <ul class="menu-list">
-            <li class="menu-item">
-                <a class="menu-link" href="#">Idrott |</a>
-                <a class="menu-link" href="#">Häsla |</a>
-                <a class="menu-link" href="#">Samhälle och Konflikter |</a>
-                <a class="menu-link" href="#">Vetenskap och Teknik |</a>
-                <a class="menu-link" href="#">Livsstil och Fritid |</a>
-                <a class="menu-link" href="#">Ekonomi |</a>
-                <a class="menu-link" href="#">Religion</a>
-            </li>
-        </ul>
-    </div>
+    @if (ViewContext.RouteData.Values["action"].ToString().Equals("Index", StringComparison.OrdinalIgnoreCase))
+    {
+        <div class="menu">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <span class="menu-label"></span>
+                    @foreach (var topic in sortedTopics)
+                    {
+                        <a class="menu-link" href="?topic=@topic.Key">| @topic.Value |</a>
+                    }
+                </li>
+            </ul>
+        </div>
+    }
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -63,7 +85,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true" defer></script>
-    <script src="~/js/menu.js" asp-append-version="true" defer></script> @* Menu script*@
+    <script src="~/js/menu.js" asp-append-version="true" defer></script> @*Menu script*@
     <script src="~/js/footer.js" asp-append-version="true" defer></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
