@@ -105,7 +105,7 @@ a.menu-link:hover {
 }
 
 .menu {
-  position: absolute;
+  position: flex;
   top: 100px;
   /* Värde beroende på headerns höjd */
   left: 0;

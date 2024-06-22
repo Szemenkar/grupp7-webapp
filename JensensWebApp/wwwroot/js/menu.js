@@ -17,13 +17,16 @@ window.addEventListener('scroll', () => {
       menu.style.position = 'fixed';
       menu.style.opacity = '1';
       menu.style.background = 'linear-gradient(to bottom, #FB7E7E, #ba85e9, rgba(186, 133, 233, 0.7))';
+      menu.style.marginTop = '0';
     }
   } else {
     // Om användaren är ovanför headern
-    menu.style.position = 'absolute';
+    menu.style.position = 'fixed';
     menu.style.top = `${headerHeight}px`;
     menu.style.opacity = '1';
     menu.style.background = 'transparent';
+    menu.style.marginTop = '15px';
+
   }
 
   prevScrollPos = currentScrollPos; //Uppdaterar positionen
