@@ -53,18 +53,20 @@
             </div>
         </nav>
     </header>
-
-    <div class="menu">
-        <ul class="menu-list">
-            <li class="menu-item">
-                <span class="menu-label"></span>
-                @foreach (var topic in sortedTopics)
-                {
-                    <a class="menu-link" href="?topic=@topic.Key">| @topic.Value |</a>
-                }
-            </li>
-        </ul>
-    </div>
+    @if (ViewContext.RouteData.Values["action"].ToString().Equals("Index", StringComparison.OrdinalIgnoreCase))
+    {
+        <div class="menu">
+            <ul class="menu-list">
+                <li class="menu-item">
+                    <span class="menu-label"></span>
+                    @foreach (var topic in sortedTopics)
+                    {
+                        <a class="menu-link" href="?topic=@topic.Key">| @topic.Value |</a>
+                    }
+                </li>
+            </ul>
+        </div>
+    }
 
     <div class="container">
         <main role="main" class="pb-3">
