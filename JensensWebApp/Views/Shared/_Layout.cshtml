@@ -35,10 +35,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+
+    <link id="theme-stylesheet" rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+ <style>
+        /* Switch styling */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+            border: 1px solid white;
+            transition: .4s;
+            border-radius: 20px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: rgb(255, 16, 240);
+            background-color: rgb(247, 57, 162) !important;
+            border: none !important;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+    </style>
+
 </head>
 
 <body>
+
+    <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider"></span>
+</label>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var theme = localStorage.getItem('theme'); 
+    var themeToggle = document.getElementById('theme-toggle');
+    if (theme === 'dark') {
+        document.getElementById('theme-stylesheet').setAttribute('href', '/css/darkmode.css');
+        themeToggle.checked = true;
+    }
+
+    themeToggle.addEventListener('change', function() {
+        if (themeToggle.checked) {
+            document.getElementById('theme-stylesheet').setAttribute('href', '/css/darkmode.css');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.getElementById('theme-stylesheet').setAttribute('href', '/css/site.css');
+            localStorage.setItem('theme', 'light');
+        }
+    });
+});
+</script>
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">

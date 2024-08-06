@@ -30,11 +30,8 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-image: url("images/bg.jpg");
-  color: rgba(255, 255, 255);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: none !important;
+  background-color: black !important;
 }
 
 .abril-fatface-regular {
@@ -118,6 +115,9 @@ a.menu-link:hover {
   z-index: 1000;
 }
 
+
+
+
 .btn.btn-primary {
   background-color: transparent;
   height: 40px;
@@ -153,24 +153,26 @@ label[for="sortBy"] {
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
   /*min-height: 250px;*/
-  /*width: 275px !important;*/
-  height: 255px;
+  height: 255px!important;
   width: 255px !important;
-  margin: 10 px;
+  margin: 10px !important;
   padding: 15px !important;
   border-radius: 0px;
   display: inline-block;
   transition: transform 0.2s;
+  /*border: 0.8px solid rgba(255, 16, 240, 0.7);*/
+  /*border: 0.8px solid rgba(239,97,83, 0.7);*/
+  border: 0.8px solid rgba(247, 57, 162, 1);
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .card {
-    width: calc(33.33% - 20px);
+    width: calc(33.3% - 20px);
     margin: 10px;
   }
-}
+}*/
 
 .row {
   display: flex;
@@ -178,14 +180,14 @@ label[for="sortBy"] {
 
 .card:hover {
   transform: scale(1.02);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(247, 57, 162, 0.15) !important;
+  border: 1px solid rgba(247, 57, 162) !important;
 }
 
 .card-body {
-  color: rgb(72, 72, 72);
+  color: rgb(255, 255, 255);
   overflow: hidden !important;
-  /*width: 275px;*/
-  text-align: center;
+  /*width: 255px;*/
   width: calc(100%);
   height: calc(100%);
   text-align: center;
@@ -194,6 +196,7 @@ label[for="sortBy"] {
 }
 
 .card-body a:hover {
+  color: rgb(255, 255, 255);
   text-decoration: none !important;
 }
 
@@ -243,8 +246,6 @@ html {
   opacity: 70%;
 }
 
-
-
 #topBtn {
   position: absolute;
   right: 50px;
@@ -265,49 +266,25 @@ html {
   transform: scale(1.05);
 }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
+/* darkmode.css */
+
+/* Common styles for dark mode */
+
+body {
+    background-color: #121212; /* Dark background color */
+    color: #e0e0e0; /* Light text color */
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
+/* Override slider styles for dark mode if needed */
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
-    border: 1px solid white;
-    transition: .4s;
-    border-radius: 20px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+    border: 1px solid #bbb; 
 }
 
 input:checked + .slider {
-    background-color: rgb(247, 57, 162) !important;
+    background-color: rgb(255, 16, 240) !important; /* Adjust color for dark mode */
     border: none !important;
 }
 
 input:checked + .slider:before {
-    transform: translateX(20px);
+    background-color: #000; 
 }
