@@ -118,6 +118,10 @@ a.menu-link:hover {
   z-index: 1000;
 }
 
+/*.menu.style {
+background-color:rgba(247, 57, 162, 0.7);
+}*/
+
 .btn.btn-primary {
   background-color: transparent;
   height: 40px;
@@ -265,8 +269,16 @@ html {
   transform: scale(1.05);
 }
 
+/*darkmode switch & slider*/
+.switch-container{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+}
+
 .switch {
-    position: relative;
+    position:relative;
     display: inline-block;
     width: 40px;
     height: 20px;
@@ -297,9 +309,9 @@ html {
     height: 14px;
     width: 14px;
     left: 3px;
-    bottom: 3px;
+    bottom: 2.3px;
     background-color: white;
-    transition: .4s;
+    transition: .9s;
     border-radius: 50%;
 }
 
