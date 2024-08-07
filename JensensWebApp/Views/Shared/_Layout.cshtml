@@ -85,20 +85,29 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </nav>
     </header>
+
     @if (ViewContext.RouteData.Values["action"].ToString().Equals("Index", StringComparison.OrdinalIgnoreCase))
-    {
-        <div class="menu">
-            <ul class="menu-list">
-                <li class="menu-item">
-                    <span class="menu-label"></span>
-                    @foreach (var topic in sortedTopics)
+{
+    <div class="menu">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <span class="menu-label"></span>
+                @{
+                    int count = 0;
+                    foreach (var topic in sortedTopics)
                     {
-                        <a class="menu-link" href="?topic=@topic.Key">| @topic.Value |</a>
+                        if (count > 0)
+                        {
+                            <text> | </text>
+                        }
+                        <a class="menu-link" href="?topic=@topic.Key">@topic.Value</a>
+                        count++;
                     }
-                </li>
-            </ul>
-        </div>
-    }
+                }
+            </li>
+        </ul>
+    </div>
+}
 
     <div class="container">
         <main role="main" class="pb-3">
