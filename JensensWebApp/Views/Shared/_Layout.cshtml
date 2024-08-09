@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 
 @model IList<JensensWebApp.Models.Article>
 
@@ -49,27 +49,6 @@
     </label>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    var theme = localStorage.getItem('theme'); 
-    var themeToggle = document.getElementById('theme-toggle');
-    
-    if (theme === 'dark') {
-        document.getElementById('theme-stylesheet').setAttribute('href', '/css/darkmode.css');
-        themeToggle.checked = true;
-    }
-
-    themeToggle.addEventListener('change', function() {
-        if (themeToggle.checked) {
-            document.getElementById('theme-stylesheet').setAttribute('href', '/css/darkmode.css');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.getElementById('theme-stylesheet').setAttribute('href', '/css/site.css');
-            localStorage.setItem('theme', 'light');
-        }
-    });
-});
-</script>
 
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -128,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <script src="~/js/site.js" asp-append-version="true" defer></script>
     <script src="~/js/menu.js" asp-append-version="true" defer></script> @*Menu script*@
     <script src="~/js/footer.js" asp-append-version="true" defer></script>
+    <script src="~/js/darkmode.js" asp-append-version="true" defer></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
