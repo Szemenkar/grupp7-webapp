@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 
 @model IList<JensensWebApp.Models.Article>
 
@@ -35,10 +35,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Outfit:wght@100..900&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link id="theme-stylesheet" rel="stylesheet" href="/css/site.css" asp-append-version="true" />
+
 </head>
 
 <body>
+
+<div class="switch-container">
+    <span>Dark Mode </span>
+    <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+    </label>
+</div>
+
+
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -53,20 +64,29 @@
             </div>
         </nav>
     </header>
+
     @if (ViewContext.RouteData.Values["action"].ToString().Equals("Index", StringComparison.OrdinalIgnoreCase))
-    {
-        <div class="menu">
-            <ul class="menu-list">
-                <li class="menu-item">
-                    <span class="menu-label"></span>
-                    @foreach (var topic in sortedTopics)
+{
+    <div class="menu">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <span class="menu-label"></span>
+                @{
+                    int count = 0;
+                    foreach (var topic in sortedTopics)
                     {
-                        <a class="menu-link" href="?topic=@topic.Key">| @topic.Value |</a>
+                        if (count > 0)
+                        {
+                            <text> | </text>
+                        }
+                        <a class="menu-link" href="?topic=@topic.Key">@topic.Value</a>
+                        count++;
                     }
-                </li>
-            </ul>
-        </div>
-    }
+                }
+            </li>
+        </ul>
+    </div>
+}
 
     <div class="container">
         <main role="main" class="pb-3">
@@ -87,6 +107,7 @@
     <script src="~/js/site.js" asp-append-version="true" defer></script>
     <script src="~/js/menu.js" asp-append-version="true" defer></script> @*Menu script*@
     <script src="~/js/footer.js" asp-append-version="true" defer></script>
+    <script src="~/js/darkmode.js" asp-append-version="true" defer></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 
